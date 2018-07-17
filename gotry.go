@@ -1,7 +1,7 @@
 package gotry
 
 // Gotry object
-type Gotry struct {
+type GoTry struct {
   catch   func(Exception)
   finally func()
   Error   Exception
@@ -17,8 +17,8 @@ func Throw(e Exception) {
 }
 
 // try this function
-func Try(funcToTry func()) (o *Gotry) {
-  o = &Gotry{nil, nil, nil}
+func Try(funcToTry func()) (o *GoTry) {
+  o = &GoTry{nil, nil, nil}
   // catch throw in try
   defer func() {
     o.Error = recover()
@@ -29,7 +29,7 @@ func Try(funcToTry func()) (o *Gotry) {
 }
 
 // catch function
-func (o *Gotry) Catch(funcCatched func(err Exception)) (*Gotry){
+func (o *GoTry) Catch(funcCatched func(err Exception)) (*GoTry){
   o.catch = funcCatched
   if o.Error != nil {
     defer func() {
@@ -53,7 +53,7 @@ func (o *Gotry) Catch(funcCatched func(err Exception)) (*Gotry){
 }
 
 // finally function
-func (o *Gotry) Finally(finallyFunc func()) () {
+func (o *GoTry) Finally(finallyFunc func()) () {
   if o.finally != nil {
     panic("Finally Function by default !!")
   } else {
