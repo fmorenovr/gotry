@@ -1,7 +1,7 @@
 # golang + Try/Catch/Finally = GoTry
 
 goTry (Golang for Try/Catch/Finally) is a Golang implementation for Exception handling.
-You can see an extended doc in [godocs](https://godoc.org/github.com/Jenazads/goTry).
+You can see an extended doc in [godocs](https://godoc.org/github.com/fmorenovr/goTry).
 
 ## Try/Catch/Finally
 
@@ -13,7 +13,7 @@ See more info [here](https://golang.org/doc/effective_go.html).
 
 * First, You should download my library:
 
-      go get github.com/jenazads/gotry/
+      go get github.com/fmorenovr/gotry/
 
 * Then, you should use for differents implements in Go.
         
